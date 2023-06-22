@@ -5,9 +5,10 @@
   "homepage": "https://materializecss.github.io/materialize/",
   "version": "2.0.2-alpha",
   "main": "dist/js/materialize.js",
+  "module": "src/index.ts",
   "style": "dist/css/materialize.css",
   "sass": "sass/materialize.scss",
-  "typings": "dist/src/global.d.ts",
+  "typings": "dist/src/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",

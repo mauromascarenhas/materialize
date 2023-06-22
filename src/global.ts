@@ -112,5 +112,3 @@ export class M {
     M.FloatingActionButton.init(registry.FloatingActionButton, {});
   }
 }
-
-export default M;
