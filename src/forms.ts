@@ -114,7 +114,7 @@ export class Forms {
             filenames.push(files[i].name);
           }
           pathInput.value = filenames.join(', ');
-          pathInput.dispatchEvent(new Event('change'));
+          pathInput.dispatchEvent(new Event('change',{bubbles:true, cancelable:true, composed:true}));
         });
       });
 
