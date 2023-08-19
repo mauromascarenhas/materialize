@@ -94,13 +94,7 @@ export class Forms {
       });
 
       document.querySelectorAll('.materialize-textarea').forEach((textArea: HTMLTextAreaElement) => {
-        // Save Data in Element
-        textArea.setAttribute('original-height', textArea.getBoundingClientRect().height.toString());
-        textArea.setAttribute('previous-length', textArea.value.length.toString());
-        Forms.textareaAutoResize(textArea);
-
-        textArea.addEventListener('keyup', e => Forms.textareaAutoResize(textArea));
-        textArea.addEventListener('keydown', e => Forms.textareaAutoResize(textArea));
+          Forms.textareaAutoResize(textArea);
       });
 
       // File Input Path
@@ -120,4 +114,15 @@ export class Forms {
 
     });
   }
+
+  static InitTextarea(textarea: HTMLTextAreaElement){
+        // Save Data in Element
+        textArea.setAttribute('original-height', textArea.getBoundingClientRect().height.toString());
+        textArea.setAttribute('previous-length', textArea.value.length.toString());
+        Forms.textareaAutoResize(textArea);
+
+        textArea.addEventListener('keyup', e => Forms.textareaAutoResize(textArea));
+        textArea.addEventListener('keydown', e => Forms.textareaAutoResize(textArea));
+  }
+  
 }
