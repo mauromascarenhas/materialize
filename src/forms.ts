@@ -99,17 +99,7 @@ export class Forms {
 
       // File Input Path
       document.querySelectorAll('.file-field input[type="file"]').forEach((fileInput: HTMLInputElement) => {
-        fileInput.addEventListener('change', e => {
-          const fileField = fileInput.closest('.file-field');
-          const pathInput = <HTMLInputElement>fileField.querySelector('input.file-path');
-          const files = fileInput.files;
-          const filenames = [];
-          for (let i = 0; i < files.length; i++) {
-            filenames.push(files[i].name);
-          }
-          pathInput.value = filenames.join(', ');
-          pathInput.dispatchEvent(new Event('change'));
-        });
+          Forms.InitFileInputPath(fileInput);
       });
 
     });
@@ -123,6 +113,20 @@ export class Forms {
 
         textarea.addEventListener('keyup', e => Forms.textareaAutoResize(textarea));
         textarea.addEventListener('keydown', e => Forms.textareaAutoResize(textarea));
+  }
+
+  static InitFileInputPath(fileInput: HTMLInputElement){
+        fileInput.addEventListener('change', e => {
+          const fileField = fileInput.closest('.file-field');
+          const pathInput = <HTMLInputElement>fileField.querySelector('input.file-path');
+          const files = fileInput.files;
+          const filenames = [];
+          for (let i = 0; i < files.length; i++) {
+            filenames.push(files[i].name);
+          }
+          pathInput.value = filenames.join(', ');
+          pathInput.dispatchEvent(new Event('change'));
+        });
   }
   
 }
