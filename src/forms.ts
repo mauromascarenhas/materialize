@@ -117,12 +117,12 @@ export class Forms {
 
   static InitTextarea(textarea: HTMLTextAreaElement){
         // Save Data in Element
-        textArea.setAttribute('original-height', textArea.getBoundingClientRect().height.toString());
-        textArea.setAttribute('previous-length', textArea.value.length.toString());
-        Forms.textareaAutoResize(textArea);
+        textarea.setAttribute('original-height', textarea.getBoundingClientRect().height.toString());
+        textarea.setAttribute('previous-length', textarea.value.length.toString());
+        Forms.textareaAutoResize(textarea);
 
-        textArea.addEventListener('keyup', e => Forms.textareaAutoResize(textArea));
-        textArea.addEventListener('keydown', e => Forms.textareaAutoResize(textArea));
+        textarea.addEventListener('keyup', e => Forms.textareaAutoResize(textarea));
+        textarea.addEventListener('keydown', e => Forms.textareaAutoResize(textarea));
   }
   
 }
