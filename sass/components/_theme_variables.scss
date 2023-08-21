@@ -59,14 +59,14 @@
 
     --font-color-main: var(--md-sys-color-on-background);
     --font-color-medium: rgba(0, 0, 0, 0.56);
-    --font-color-disabled: rgba(0, 0, 0, 0.38);
+    --font-color-disabled: var(--md-sys-color-on-surface);
 
-    --font-on-primary-color-main: var(--md-sys-color-primary);
-    --font-on-primary-color-dark-main: rgba(255, 255, 255, 0.87);
-    --font-on-primary-color-dark-medium: rgba(255, 255, 255, 0.60);
-    --font-on-primary-color-medium: rgba(255, 255, 255, 0.60);
+    --font-on-primary-color-main: var(--md-sys-color-on-primary);
+    --font-on-primary-color-dark-main: var(--md-sys-color-on-primary-dark);
+    --font-on-primary-color-dark-medium: var(--md-sys-color-on-surface-variant-dark);
+    --font-on-primary-color-medium:  var(--md-sys-color-on-surface-variant);
     --font-on-primary-color-disabled: rgba(255, 255, 255, 0.38);
-    --font-on-secondary-color-main: rgba(0, 0, 0, 0.87);
+    --font-on-secondary-color-main: var(--md-sys-color-on-secondary);
 
     --hover-color: rgba(0, 0, 0, 0.04);
     --focus-color: rgba(0, 0, 0, 0.12);
@@ -113,13 +113,13 @@
     --background-color: var(--md-sys-color-background);
 
     --font-color-main: var(--md-sys-color-on-background);
-    --font-color-medium: rgba(255, 255, 255, 0.60);
-    --font-color-disabled: rgba(255, 255, 255, 0.38);
+    --font-color-medium:  var(--md-sys-color-on-surface-variant);
+    --font-color-disabled: var(--md-sys-color-on-surface);
 
-    --font-on-primary-color-main: var(--md-sys-color-primary);
-    --font-on-primary-color-dark-main: rgba(255, 255, 255, 0.87);
-    --font-on-primary-color-dark-medium: rgba(255, 255, 255, 0.60);
-    --font-on-primary-color-medium: rgba(0, 0, 0, 0.56);
+    --font-on-primary-color-main: var(--md-sys-color-on-primary);
+    --font-on-primary-color-dark-main: var(--md-sys-color-on-primary-dark);
+    --font-on-primary-color-dark-medium: var(--md-sys-color-on-surface-variant-dark);
+    --font-on-primary-color-medium:  var(--md-sys-color-on-surface-variant);
     --font-on-primary-color-disabled: rgba(0, 0, 0, 0.38);
 
     --hover-color: rgba(255, 255, 255, 0.04);
