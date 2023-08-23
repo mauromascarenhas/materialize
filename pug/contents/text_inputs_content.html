@@ -354,8 +354,8 @@
         <pre><code class="language-javascript">  M.Forms.InitTextarea(document.querySelector('#textarea1'));</code></pre>
         <p>When dynamically changing the value of a textarea like setting <code class="language-markup">HTMLElement#value</code> attribute, you must trigger an autoresize on it afterwords because simply updating the element's value does not automatically trigger the events we've binded to the textarea.</p>
         <pre><code class="language-javascript">
-            document.querySelector("#textarea1").value = 'New Text';
-            M.Forms.textareaAutoResize(document.querySelector('#textarea1'));
+  document.querySelector("#textarea1").value = 'New Text';
+  M.Forms.textareaAutoResize(document.querySelector('#textarea1'));
         </code></pre>
         
 
