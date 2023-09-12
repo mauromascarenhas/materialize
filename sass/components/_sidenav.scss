@@ -201,16 +201,6 @@
   }
 }
 
-/*
-.sidenav .collapsible-body > ul:not(.collapsible) > li.active,
-.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
-  background-color: $primary-color;
-  a:not(.btn) {
-    color: $font-on-primary-color-main;
-  }
-}
-*/
-
 .sidenav .collapsible-body {
   padding: 0;
 }
@@ -239,6 +229,5 @@
   }
   .collapsible-body {
     border: none;
-    background-color: $collapsible-bg-color;
   }
 }
