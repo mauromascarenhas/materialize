@@ -1,32 +1,51 @@
 // Color Classes
 
-@each $color_name, $color in $colors {
-  @each $color_type, $color_value in $color {
-    @if $color_type == "base" {
-      .#{$color_name} {
-        background-color: $color_value !important;
+$color-classes-bg: false !default; // For background color classes
+$color-classes-txt: false !default; // For text color classes
+
+@mixin color_classes($background: true, $text: true){
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type == "base" {
+        @if $background {
+          .#{$color_name} {
+            background-color: $color_value !important;
+          }
+        }
+        @if $text {
+          .#{$color_name}-text {
+            color: $color_value !important;
+          }
+        }
       }
-      .#{$color_name}-text {
-        color: $color_value !important;
+      @else if $color_name != "shades" {
+        @if $background {
+          .#{$color_name}.#{$color_type} {
+            background-color: $color_value !important;
+          }
+        }
+        @if $text {
+          .#{$color_name}-text.text-#{$color_type} {
+            color: $color_value !important;
+          }
+        }
       }
     }
-    @else if $color_name != "shades" {
-      .#{$color_name}.#{$color_type} {
+  }
+  
+  // Shade classes
+  @each $color, $color_value in $shades {
+    @if $background {
+      .#{$color} {
         background-color: $color_value !important;
       }
-      .#{$color_name}-text.text-#{$color_type} {
+    }
+    @if $text {
+      .#{$color}-text {
         color: $color_value !important;
       }
     }
   }
 }
 
-// Shade classes
-@each $color, $color_value in $shades {
-  .#{$color} {
-    background-color: $color_value !important;
-  }
-  .#{$color}-text {
-    color: $color_value !important;
-  }
-}
+@include color_classes($color-classes-bg, $color-classes-txt);
