@@ -41,7 +41,8 @@ module.exports = function(grunt) {
           sourcemap: false
         },
         files: {
-          'dist/css/materialize.css': 'sass/materialize.scss'
+          'dist/css/materialize.css': 'sass/materialize.scss',
+          'dist/css/materialize-colors.css': 'sass/materialize-colors.scss'
         }
       },
 
@@ -51,7 +52,8 @@ module.exports = function(grunt) {
           sourcemap: false
         },
         files: {
-          'dist/css/materialize.min.css': 'sass/materialize.scss'
+          'dist/css/materialize.min.css': 'sass/materialize.scss',
+          'dist/css/materialize-colors.min.css': 'sass/materialize-colors.scss'
         }
       },
 
@@ -73,7 +75,8 @@ module.exports = function(grunt) {
           sourcemap: false
         },
         files: {
-          'bin/materialize.css': 'sass/materialize.scss'
+          'bin/materialize.css': 'sass/materialize.scss',
+          'bin/materialize-colors.css': 'sass/materialize-colors.scss'
         }
       }
     },
@@ -93,16 +96,25 @@ module.exports = function(grunt) {
         ]
       },
       expanded: {
-        src: 'dist/css/materialize.css'
+        files: [
+          { src: 'dist/css/materialize.css' },
+          { src: 'dist/css/materialize-colors.css' },
+        ]
       },
       min: {
-        src: 'dist/css/materialize.min.css'
+        files: [
+          { src: 'dist/css/materialize.min.css' },
+          { src: 'dist/css/materialize-colors.min.css' },
+        ]
       },
       gh: {
         src: 'docs/css/ghpages-materialize.css'
       },
       bin: {
-        src: 'bin/materialize.css'
+        files: [
+          { src: 'bin/materialize.css' },
+          { src: 'bin/materialize-colors.css' },
+        ]
       }
     },
 
@@ -185,6 +197,7 @@ module.exports = function(grunt) {
         },
         files: [
           { expand: true, cwd: 'sass/', src: ['materialize.scss'], dest: 'materialize-src/sass/' },
+          { expand: true, cwd: 'sass/', src: ['materialize-colors.scss'], dest: 'materialize-src/sass/' },
           { expand: true, cwd: 'sass/', src: ['components/**/*'], dest: 'materialize-src/sass/' },
           { expand: true, cwd: 'src/',  src: ['**/*'], dest: 'materialize-src/ts/' },
           { expand: true, cwd: 'dist/js/', src: ['**/*'], dest: 'materialize-src/js/bin/' },
